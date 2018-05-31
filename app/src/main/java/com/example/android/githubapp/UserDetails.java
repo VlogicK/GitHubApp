@@ -1,35 +1,247 @@
+
 package com.example.android.githubapp;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.Toast;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
+public class UserDetails {
 
-import static com.example.android.githubapp.MainActivity.ID;
+    @SerializedName("login")
+    @Expose
+    private String login;
+    @SerializedName("id")
+    @Expose
+    private Integer id;
+    @SerializedName("node_id")
+    @Expose
+    private String nodeId;
+    @SerializedName("avatar_url")
+    @Expose
+    private String avatarUrl;
+    @SerializedName("gravatar_id")
+    @Expose
+    private String gravatarId;
+    @SerializedName("url")
+    @Expose
+    private String url;
+    @SerializedName("html_url")
+    @Expose
+    private String htmlUrl;
+    @SerializedName("followers_url")
+    @Expose
+    private String followersUrl;
+    @SerializedName("following_url")
+    @Expose
+    private String followingUrl;
+    @SerializedName("gists_url")
+    @Expose
+    private String gistsUrl;
+    @SerializedName("starred_url")
+    @Expose
+    private String starredUrl;
+    @SerializedName("subscriptions_url")
+    @Expose
+    private String subscriptionsUrl;
+    @SerializedName("organizations_url")
+    @Expose
+    private String organizationsUrl;
+    @SerializedName("repos_url")
+    @Expose
+    private String reposUrl;
+    @SerializedName("events_url")
+    @Expose
+    private String eventsUrl;
+    @SerializedName("received_events_url")
+    @Expose
+    private String receivedEventsUrl;
+    @SerializedName("type")
+    @Expose
+    private String type;
+    @SerializedName("site_admin")
+    @Expose
+    private Boolean siteAdmin;
+    @SerializedName("name")
+    @Expose
+    private String name;
+    @SerializedName("company")
+    @Expose
+    private Object company;
+    @SerializedName("blog")
+    @Expose
+    private String blog;
+    @SerializedName("location")
+    @Expose
+    private Object location;
+    @SerializedName("email")
+    @Expose
+    private Object email;
+    @SerializedName("hireable")
+    @Expose
+    private Object hireable;
+    @SerializedName("bio")
+    @Expose
+    private Object bio;
+    @SerializedName("public_repos")
+    @Expose
+    private Integer publicRepos;
+    @SerializedName("public_gists")
+    @Expose
+    private Integer publicGists;
+    @SerializedName("followers")
+    @Expose
+    private Integer followers;
+    @SerializedName("following")
+    @Expose
+    private Integer following;
+    @SerializedName("created_at")
+    @Expose
+    private String createdAt;
+    @SerializedName("updated_at")
+    @Expose
+    private String updatedAt;
 
-public class UserDetails extends AppCompatActivity {
-
-    String id;
-    int followers;
-    int following;
-    String public_repos;
-    String userId;
-    String name;
-    String mainUrl;
-
-    public UserDetails() {
+    public String getLogin() {
+        return login;
     }
 
-    public UserDetails(String userId, String id, int followers, int following, String public_repos) {
-        this.userId = userId;
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
         this.id = id;
-        this.followers = followers;
-        this.following = following;
-        this.public_repos = public_repos;
+    }
+
+    public String getNodeId() {
+        return nodeId;
+    }
+
+    public void setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
+    }
+
+    public String getGravatarId() {
+        return gravatarId;
+    }
+
+    public void setGravatarId(String gravatarId) {
+        this.gravatarId = gravatarId;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getHtmlUrl() {
+        return htmlUrl;
+    }
+
+    public void setHtmlUrl(String htmlUrl) {
+        this.htmlUrl = htmlUrl;
+    }
+
+    public String getFollowersUrl() {
+        return followersUrl;
+    }
+
+    public void setFollowersUrl(String followersUrl) {
+        this.followersUrl = followersUrl;
+    }
+
+    public String getFollowingUrl() {
+        return followingUrl;
+    }
+
+    public void setFollowingUrl(String followingUrl) {
+        this.followingUrl = followingUrl;
+    }
+
+    public String getGistsUrl() {
+        return gistsUrl;
+    }
+
+    public void setGistsUrl(String gistsUrl) {
+        this.gistsUrl = gistsUrl;
+    }
+
+    public String getStarredUrl() {
+        return starredUrl;
+    }
+
+    public void setStarredUrl(String starredUrl) {
+        this.starredUrl = starredUrl;
+    }
+
+    public String getSubscriptionsUrl() {
+        return subscriptionsUrl;
+    }
+
+    public void setSubscriptionsUrl(String subscriptionsUrl) {
+        this.subscriptionsUrl = subscriptionsUrl;
+    }
+
+    public String getOrganizationsUrl() {
+        return organizationsUrl;
+    }
+
+    public void setOrganizationsUrl(String organizationsUrl) {
+        this.organizationsUrl = organizationsUrl;
+    }
+
+    public String getReposUrl() {
+        return reposUrl;
+    }
+
+    public void setReposUrl(String reposUrl) {
+        this.reposUrl = reposUrl;
+    }
+
+    public String getEventsUrl() {
+        return eventsUrl;
+    }
+
+    public void setEventsUrl(String eventsUrl) {
+        this.eventsUrl = eventsUrl;
+    }
+
+    public String getReceivedEventsUrl() {
+        return receivedEventsUrl;
+    }
+
+    public void setReceivedEventsUrl(String receivedEventsUrl) {
+        this.receivedEventsUrl = receivedEventsUrl;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Boolean getSiteAdmin() {
+        return siteAdmin;
+    }
+
+    public void setSiteAdmin(Boolean siteAdmin) {
+        this.siteAdmin = siteAdmin;
     }
 
     public String getName() {
@@ -40,74 +252,100 @@ public class UserDetails extends AppCompatActivity {
         this.name = name;
     }
 
-    ArrayList<UserDetails> userDetails = new ArrayList<>();
-    ArrayAdapter<String> arrayAdapter;
-
-
-    public String getUserId() {
-        return userId;
+    public Object getCompany() {
+        return company;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setCompany(Object company) {
+        this.company = company;
     }
 
-    public String getId() {
-        return id;
+    public String getBlog() {
+        return blog;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setBlog(String blog) {
+        this.blog = blog;
     }
 
-    public int getFollowers() {
+    public Object getLocation() {
+        return location;
+    }
+
+    public void setLocation(Object location) {
+        this.location = location;
+    }
+
+    public Object getEmail() {
+        return email;
+    }
+
+    public void setEmail(Object email) {
+        this.email = email;
+    }
+
+    public Object getHireable() {
+        return hireable;
+    }
+
+    public void setHireable(Object hireable) {
+        this.hireable = hireable;
+    }
+
+    public Object getBio() {
+        return bio;
+    }
+
+    public void setBio(Object bio) {
+        this.bio = bio;
+    }
+
+    public Integer getPublicRepos() {
+        return publicRepos;
+    }
+
+    public void setPublicRepos(Integer publicRepos) {
+        this.publicRepos = publicRepos;
+    }
+
+    public Integer getPublicGists() {
+        return publicGists;
+    }
+
+    public void setPublicGists(Integer publicGists) {
+        this.publicGists = publicGists;
+    }
+
+    public Integer getFollowers() {
         return followers;
     }
 
-    public void setFollowers(int followers) {
+    public void setFollowers(Integer followers) {
         this.followers = followers;
     }
 
-    public int getFollowing() {
+    public Integer getFollowing() {
         return following;
     }
 
-    public void setFollowing(int following) {
+    public void setFollowing(Integer following) {
         this.following = following;
     }
 
-    public String getPublic_repos() {
-        return public_repos;
+    public String getCreatedAt() {
+        return createdAt;
     }
 
-    public void setPublic_repos(String public_repos) {
-        this.public_repos = public_repos;
+    public void setCreatedAt(String createdAt) {
+        this.createdAt = createdAt;
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_details);
-
-        Intent intent=getIntent();
-        String userId=intent.getStringExtra(ID);
-        Toast t1=Toast.makeText(this,userId,Toast.LENGTH_SHORT);
-        t1.show();
-
-         mainUrl="https://api.github.com/users/"+userId;
-
-         fetchDetails();
-
-
-
+    public String getUpdatedAt() {
+        return updatedAt;
     }
 
-    private void fetchDetails() {
-
-        DetailsAsyncTask detailsAsyncTask=new DetailsAsyncTask(this);
-        detailsAsyncTask.execute(mainUrl);
-        Log.i("Course Async Task","After execution");
-
-
+    public void setUpdatedAt(String updatedAt) {
+        this.updatedAt = updatedAt;
     }
+
 }
